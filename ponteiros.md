@@ -41,7 +41,7 @@ int main() {
 
 ---
 
-## 3) Ponteiros x Arrays x Matrizes:
+## 3) Exemplo de Ponteiros x Arrays x Matrizes:
 
 - Em C, o nome do vetor `v` é equivalente ao endereço do seu primeiro elemento, ou seja, `&v[0]`.
 
@@ -72,7 +72,7 @@ int main() {
 
 ---
 
-## 4) Ponteiros x Structs:
+## 4) Exemplo de Ponteiros x Structs:
 
 ```c
 typedef struct {
