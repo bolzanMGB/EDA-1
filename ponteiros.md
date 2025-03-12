@@ -1,12 +1,12 @@
-# Guia de Ponteiros em C
+# Básico sobre Ponteiros em C
 
-## 1) Geral
+## 1) Geral:
 
-- `int` = 4 bytes *(armazena o valor em binário)*
-- `char` = 1 byte
-- `%p` = mostra o endereço de um ponteiro
-- `&variavel` = mostra o endereço da variável
-- `*ponteiro` = ponteiro que aponta para o endereço de alguma variável
+- `int` = 4 bytes;
+- `char` = 1 byte;
+- `%p` = mostra o endereço de um ponteiro;
+- `&variavel` = mostra o endereço da variável;
+- `*ponteiro` = ponteiro que aponta para o endereço de alguma variável;
 
 ```c
 int main() {
@@ -24,7 +24,7 @@ int main() {
 
 ---
 
-## 2) Passagem como Parâmetro em Funções
+## 2) Passagem como Parâmetro em Funções:
 
 ```c
 void troca(int *p, int *q) { // ponteiros recebem endereços
@@ -41,7 +41,7 @@ int main() {
 
 ---
 
-## 3) Ponteiros x Arrays x Matrizes
+## 3) Ponteiros x Arrays x Matrizes:
 
 - Em C, o nome do vetor `v` é equivalente ao endereço do seu primeiro elemento, ou seja, `&v[0]`.
 
@@ -72,7 +72,7 @@ int main() {
 
 ---
 
-## 4) Ponteiros x Structs
+## 4) Ponteiros x Structs:
 
 ```c
 typedef struct {
