@@ -1,6 +1,6 @@
-# 📌 Alocacao de Memoria em C
+# Alocacao de Memoria em C
 
-## 1️⃣ Tipos de Espaço de Endereços
+## 1) Tipos de Espaço de Endereços
 
 ### 1.1 Text;
 - Contém o código do programa e constantes;
@@ -16,7 +16,7 @@
 
 ---
 
-## 2️⃣ Tipos de Alocação de Memória
+## 2) Tipos de Alocação de Memória
 
 ### 2.1 Alocação Estática;
 - Ocorre quando são declaradas variáveis globais ou estáticas;
@@ -60,7 +60,7 @@ int main(void) {
 
 ---
 
-## 3️⃣ Operadores de Alocação de Memória
+## 3) Operadores de Alocação de Memória
 
 ### 3.1 `sizeof`;
 Retorna o tamanho de um dado em bytes;
