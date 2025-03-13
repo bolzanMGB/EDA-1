@@ -93,7 +93,7 @@ Ordenação parcial: [aab, aaa]  [bba, baaa]
 Ordenação final:   [aaa] [aab] [bba] [baaa]
 ```
 
-## 4 Decoreba:
+## 4. Decoreba:
 
 ### 4.1 LSD:
 
