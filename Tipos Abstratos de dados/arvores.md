@@ -77,7 +77,7 @@ busca nos vetores ordenados;
     - Se estiver na árvore, está na subárvore direita;
     
  ![image](https://github.com/user-attachments/assets/a6c2d477-9f80-4a33-ae91-4d2f5890f5eb)
-    Nessa ordem: 4, 1, 9, 2, 11, 6, 3, 7, 12, 8, 5, 10;
+- Nessa ordem: 4, 1, 9, 2, 11, 6, 3, 7, 12, 8, 5, 10;
     
 
 ```cpp
