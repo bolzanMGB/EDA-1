@@ -40,6 +40,7 @@
 - **Se a altura é h, então a árvore tem:**
     - No mínimo h nós internos;
     - No máximo 2^h - 1 nós internos;
+      
 ![image](https://github.com/user-attachments/assets/42c0d182-1fc5-4340-bd85-3b914e591246)
 
 
