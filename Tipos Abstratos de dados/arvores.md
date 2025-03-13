@@ -68,15 +68,14 @@ busca nos vetores ordenados;
 - Cada nó tem a chave maior que as chaves da sua subárvore esquerda;
 - Cada nó tem a chave menor que as chaves da sua subárvore direita;
 
-### 4.7.1 Buscar um valor:
+### 4.7.2 Buscar um valor:
 
+ ![image](https://github.com/user-attachments/assets/a6c2d477-9f80-4a33-ae91-4d2f5890f5eb)
 - Ou o valor a ser buscado está na raiz da árvore:
 - Ou é menor do que o valor da raiz:
     - Se estiver na árvore, está na subárvore esquerda;
 - Ou é maior do que o valor da raiz:
     - Se estiver na árvore, está na subárvore direita;
-    
- ![image](https://github.com/user-attachments/assets/a6c2d477-9f80-4a33-ae91-4d2f5890f5eb)
 - Nessa ordem: 4, 1, 9, 2, 11, 6, 3, 7, 12, 8, 5, 10;
     
 
@@ -122,7 +121,7 @@ STnode *STsearch(STnode *no, Key v) {
 }
 ```
 
-### 4.72 Inserir um valor
+### 4.7.3 Inserir um valor
 
 ```cpp
 STnode *STinsert(STnode *no, Item item) {
@@ -217,7 +216,7 @@ void remover_sucessor(STnode *raiz) {
 // tree = STdelete(tree, c);
 ```
 
-### 4.7.4 Outros:
+### 4.7.5 Outros:
 
 ```cpp
 // achar o valor mínimo
@@ -245,7 +244,7 @@ STnode *ancestral_a_direita(STnode *no) {
 }
 ```
 
-### 4.7.5 Custos
+### 4.7.6 Custos
 
 - Não balaneadas:
     - Melhor caso: log N;
