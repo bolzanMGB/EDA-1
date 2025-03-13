@@ -1,60 +1,65 @@
-Custo
+# Tipos de Complexidade de Custo de Algoritmos
 
-1. Constante (c)
 
-Instruções são realizadas um número fixo de vezes independente do tamanho.
+## 1. Constante (O(1))
+- Instruções são realizadas um número fixo de vezes, independentemente do tamanho da entrada.
 
-1.1 Exemplos:
+### Exemplos:
+- Listas estáticas: acesso a índices; inserção;
+- Listas duplamente encadeadas: remoção de nós; inserção após um nó; inserção antes de um nó;
 
-Listas estáticas: acesso a índices; inserção;
-
-Listas duplamente encadeadas: remoção de nós; inserção após um nó; inserção antes de um nó;
-
+```c
 int operacao(int n, int a, char op) {
     int r = 0; // atribuição
     if (op == '+')
-        r = n + a; // comparação
+        r = n + a;
     else if (op == '-')
-        r = n - a; // comparação
+        r = n - a;
     else if (op == '*')
-        r = n * a; // comparação + aritmética + atribuição
-    
+        r = n * a;
     return r;
 }
+```
 
-2. Linear
+---
 
-Cresce a uma taxa constante de acordo com o aumento da entrada. Percorre cada elemento.
+## 2. Linear (O(n))
+- Cresce a uma taxa constante de acordo com o aumento da entrada.
+- Percorre cada elemento.
 
-2.1 Exemplos:
+### Exemplos:
+- Busca sequencial;
+- Listas simplesmente encadeadas: remoção de um nó específico e inserção antes de um nó específico;
+- Fatorial por recorrência;
 
-Busca sequencial;
-
-Listas simplesmente encadeadas: remoção de um nó específico e inserção antes de um nó específico;
-
-Fatorial por recorrência;
-
+```c
 int pesquisa(int x, int n, int v[]) {
-    for (int i = 0; i < n && v[i] != x; i = i + 1);
+    for (int i = 0; i < n && v[i] != x; i++);
     return i;
 }
+```
 
-3. Quadrática
+---
 
-Cresce proporcionalmente ao quadrado do tamanho da entrada.
+## 3. Quadrática (O(n^2))
+- Cresce proporcionalmente ao quadrado do tamanho da entrada.
 
+```c
 void ordenacao(int v[], int n) {
-    for (int i = 1; i < n; i++) { // a partir do segundo elemento
-        for (int j = i; j > 0 && v[j] < v[j - 1]; j--) { // comparar com os antecessores
-            troca(v[j], v[j - 1]); // posicionar
+    for (int i = 1; i < n; i++) {
+        for (int j = i; j > 0 && v[j] < v[j - 1]; j--) {
+            troca(v[j], v[j - 1]);
         }
     }
 }
+```
 
-4. Cúbica
+---
 
-Cresce proporcionalmente ao cubo do tamanho da entrada.
+## 4. Cúbica (O(n^3))
+- Cresce proporcionalmente ao cubo do tamanho da entrada.
 
+```c
 void multiplica_matrizes(int A[3][3], int B[3][3], int C[3][3]) {
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
@@ -64,25 +69,29 @@ void multiplica_matrizes(int A[3][3], int B[3][3], int C[3][3]) {
             }
         }
     }
-    imprime_matriz(C);
 }
+```
 
-5. Exponencial (K^n)
+---
 
-n múltiplas sucessivas de uma base (número fixo de chamadas recursivas).
+## 5. Exponencial (O(K^n))
+- Múltiplas sucessivas chamadas recursivas.
 
+```c
 int p(int n) {
     if (n == 0) return 0;
     else if (n == 1) return 1;
     return p(n - 1) + p(n - 2);
 }
+```
 
-6. Fatorial
+---
 
-Cada chamada executa múltiplas (linear) chamadas recursivas.
+## 6. Fatorial (O(n!))
+- Cada chamada executa múltiplas chamadas recursivas.
 
+```c
 void anagram(char str[], int k) {
-    char tmp;
     int i, len = strlen(str);
     if (k == len)
         printf("%s\n", str);
@@ -94,32 +103,20 @@ void anagram(char str[], int k) {
         }
     }
 }
+```
 
-void subsets(int v[], int i, int n, int sub[], int fim) {
-    for (int j = 0; j < fim; j++)
-        printf("%d ", sub[j]);
-    printf("\n");
+---
 
-    for (; i < n; i++) {
-        sub[fim] = v[i];
-        subsets(v, i + 1, n, sub, fim + 1);
-    }
-}
+## 7. Logarítmica (O(log n))
+#### Características:
+- Inversa da função exponencial;
+- Fica um pouco mais lento à medida que n cresce;
+- Muito rápido para grandes entradas.
 
-7. Logarítmica
+### Exemplos:
+- Busca binária;
 
-7.1 Características:
-
-É a inversa da função exponencial;
-
-Fica um pouco mais lento à medida que n cresce;
-
-A solução do problema concentra-se na solução de subproblemas;
-
-Muito rápido para grandes entradas;
-
-Busca binária;
-
+```c
 int pesquisa(int x, int v[], int esq, int dir) {
     int meio = (esq + dir) / 2;
     if (v[meio] == x) return meio;
@@ -129,14 +126,27 @@ int pesquisa(int x, int v[], int esq, int dir) {
     else
         return pesquisa(x, v, esq, meio - 1);
 }
+```
 
-8. Linearítimo
+---
 
-8.1 Características:
+## 8. Linearítimo (O(n log n))
+### Características:
+- Utiliza o paradigma de Divisão e Conquista;
+- Divide o problema em subproblemas menores;
+- Muito eficiente para grandes entradas.
 
-Divisão e conquista: quebrando o problema em problemas menores, resolvendo cada um deles independentemente e depois juntando as soluções, localmente resolvidos, gerando uma nova solução;
+### Exemplos:
+- Merge Sort;
 
-Percorre cada elemento, enquanto quebra;
-
-Merge Sort;
+```c
+void merge_sort(int v[], int inicio, int fim) {
+    if (inicio < fim) {
+        int meio = (inicio + fim) / 2;
+        merge_sort(v, inicio, meio);
+        merge_sort(v, meio + 1, fim);
+        merge(v, inicio, meio, fim);
+    }
+}
+```
 
